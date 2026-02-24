@@ -189,23 +189,23 @@ try {
 // funcion dividir con try catch dentro de la funcion
 
 function dividirConManejo(a, b) {
-try {
+  try {
     // Validaciones básicas
     if (typeof a !== "number" || typeof b !== "number" || Number.isNaN(a) || Number.isNaN(b)) {
-    throw new Error("Ambos valores deben ser números válidos");
+      throw new Error("Ambos valores deben ser números válidos");
     }
 
     if (b === 0) {
-    throw new Error("No se puede dividir por cero");
+      throw new Error("No se puede dividir por cero");
     }
 
     // Si todo está OK, retornamos la división
     return a / b;
 
-} catch (error) {
+  } catch (error) {
     console.error("Ocurrió un error:", error.message);
     return null; // Indica que no se pudo realizar la división
-}
+  }
 }
 
 console.log(dividirConManejo(10, 0));   // null
